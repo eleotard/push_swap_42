@@ -9,10 +9,10 @@ This program was created by combining two forms of sorting. I first retrieved th
 
 # Example
 
-100 random numbers:
+100 random numbers were sorted in 554 moves :
 
 ![image](https://user-images.githubusercontent.com/98972278/185189088-ea1458a1-f395-44fc-b63b-c99ec9f9350c.png)
 
-500 random numbers:
+500 random numbers were sorted in 4832 moves :
 
 ![image](https://user-images.githubusercontent.com/98972278/185189773-7a147160-2839-46a2-9f7a-ed4a9a0ba16a.png)
