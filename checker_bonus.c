@@ -6,7 +6,7 @@
 /*   By: eleotard <eleotard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 18:55:39 by eleotard          #+#    #+#             */
-/*   Updated: 2022/09/05 22:44:55 by eleotard         ###   ########.fr       */
+/*   Updated: 2022/09/05 22:53:20 by eleotard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*create_read_str(void)
 	str[0] = '\0';
 	tmp = malloc(sizeof(char) * 1);
 	if (!tmp)
-		return (NULL);
+		return (free(str), NULL);
 	tmp[0] = '1';
 	while (ft_strcmp(tmp, str) != 0)
 	{
