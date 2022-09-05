@@ -6,7 +6,7 @@
 /*   By: eleotard <eleotard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 18:55:39 by eleotard          #+#    #+#             */
-/*   Updated: 2022/06/26 16:18:20 by eleotard         ###   ########.fr       */
+/*   Updated: 2022/09/05 22:48:18 by eleotard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ t_lst	*ft_init_stack_a(char **argv)
 void	ft_check_ok_ko(t_lst **s_a, t_lst **s_b)
 {
 	if ((ft_check_sort(s_a) == OK) && (*s_b == NULL))
-		ft_printf("OK");
+		ft_printf("OK\n");
 	else
-		ft_printf("KO");
+		ft_printf("KO\n");
 }
 
 int	ft_strcmp(char *s1, char *s2)
@@ -75,7 +75,7 @@ char	*ft_strjoin_p(char *base, char *read)
 	j = 0;
 	if (!base || !read)
 		return (NULL);
-	line = malloc(sizeof(char) * (ft_strlen(base) + ft_strlen(read) + 2));
+	line = malloc(sizeof(char) * (ft_strlen(base) + ft_strlen(read) + 1));
 	if (!line)
 		return (NULL);
 	while (base[i])
@@ -102,10 +102,12 @@ char	*join_p(char *base, char *read)
 	{
 		read = malloc(sizeof(char));
 		if (!read)
-			return (NULL);
+			return (free(base), NULL);
 		read[0] = '\0';
 	}
 	new_read = ft_strjoin_p(base, read);
+	if (!new_read)
+		return (free(read), free(base), NULL);
 	free(read);
 	return (new_read);
 }

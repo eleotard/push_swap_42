@@ -6,7 +6,7 @@
 /*   By: eleotard <eleotard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 18:55:39 by eleotard          #+#    #+#             */
-/*   Updated: 2022/06/29 18:15:46 by eleotard         ###   ########.fr       */
+/*   Updated: 2022/09/05 22:44:55 by eleotard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ char	*create_read_str(void)
 		tmp = ft_free(tmp, NULL);
 		tmp = ft_strdup(str);
 		str = join_p(str, get_next_line(0));
+		if (!str)
+			return (free(tmp), NULL);
 	}
 	free(tmp);
 	return (str);
@@ -81,7 +83,7 @@ char	**ft_create_check_tab(char *line)
 			k++;
 		else
 		{
-			ft_putstr_fd("Error\n", 2);
+			ft_putstr_fd("\nError\n", 2);
 			ft_free_tab(tab);
 			return (NULL);
 		}
@@ -117,7 +119,7 @@ int	main(int argc, char **argv)
 	if (!s_a)
 		return (0);
 	if (ft_check_sort(&s_a) == OK || ft_lstsize_p(&s_a) == 1)
-		return (ft_lstclear_p(&s_a));
+		return (ft_putstr_fd("OK\n", 1), ft_lstclear_p(&s_a));
 	line = create_read_str();
 	if (!line)
 		return (ft_lstclear_p(&s_a));
