@@ -14,8 +14,8 @@ This program was created by combining two forms of sorting. I first retrieved th
 
 100 random numbers were sorted in 554 moves :
 
-![image](https://user-images.githubusercontent.com/98972278/185189088-ea1458a1-f395-44fc-b63b-c99ec9f9350c.png)
+![image](https://user-images.githubusercontent.com/98972278/193151187-a264a37a-e06a-4a93-b0ec-b72e61c5596c.png)
 
 500 random numbers were sorted in 4832 moves :
 
-![image](https://user-images.githubusercontent.com/98972278/185189773-7a147160-2839-46a2-9f7a-ed4a9a0ba16a.png)
+![image](https://user-images.githubusercontent.com/98972278/193151305-d160477b-9264-4649-b3c6-e01805df76fd.png)
