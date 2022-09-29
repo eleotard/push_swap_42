@@ -1,4 +1,7 @@
 # push_swap_42
+
+[![eleotard's 42 push_swap Score](https://badge42.vercel.app/api/v2/cl8nl1dqr01260gkytto8hg02/project/2581941)](https://github.com/JaeSeoKim/badge42)
+
 ![image](https://user-images.githubusercontent.com/98972278/185185431-c06a7d2c-1247-4dab-8a5f-d1fba1f01899.png)
 
 This program was created by combining two forms of sorting. I first retrieved the longest increasing subsequence and then applied a median sort. A smart move algorithm then reduces the number of total moves by calculating which moves are the most optimal.
